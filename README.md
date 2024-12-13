@@ -1,48 +1,38 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/h8SwtrsU)
-# COSI 116A Final Project Template
 
-This template will help you get started with your project. Please look through all these materials so you know how to organize your project.
+# Project Team 23: Public Transportation Systems Efficiency Analysis, COSI 116A F23
 
-## The GitHub Pages Website
+An interractive data visualization using D3.v4 and javascript that explores various countries spending patterns on railway systems compared to the usage of those systems. This includes various quality measures and spending breakdowns as well. The final webpage additionaly contains a description, analysis, and walk through of the visualization and creation process. This visualization will run both on chrome and firefox. 
 
-Make sure you publish your project to github pages, and put the URL here: 
+![screenshotOfVis](images/final_vis.png)
+
+## Running the Visualization
+See the published version here: 
 https://cosi116a-brandeis-infovis-fall23.github.io/graduate-team-23-transportation-systems/
 
-### Github Pages
+OR
 
-For your final project, you must render your project as a Github Page.  Github pages is a feature of GitHub repositories that gives you a publicly available URL that loads your repository.  The link to the page corresponding to your repository should be written into the readme file of your repository.
+Clone locally and run using a python webserver:
+* `python -m http.server 8000`
+* `python3 -m http.server 8000`
+* `py -m http.server 8000`
+If you are using Python 2 you will need to use `python -m SimpleHTTPServer 8000` instead, but please switch to Python 3 as [Python 2 was sunset on 2020.01.01](https://www.python.org/doc/sunset-python-2/).
 
-To publish your repository, follow the instructions at https://pages.github.com/.  You'll have to go to the settings of your repository and point GitHub Pages to your master branch.  Your GitHub Pages link will be of the following format:
+Wait for the output: `Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/)`
 
-    https://cosi116a-brandeis-infovis-fall23.github.io/graduate-team-12-mbta
-
-Note that you may have to clear your cache and reload (Ctrl+F5 on Chrome) a few times before seeing your page.
-
-
-## Setup
-
-**Under no circumstances should you be editing files via the GitHub user interface.** Do all your edits locally after cloning the repository.
-
-1. Clone this repository to your local machine. E.g., in your terminal / command prompt `CD` to where you want this the folder for this activity to be. Then run `git clone <YOUR_REPO_URL>`
-
-1. In `README.md` update the URL above to point to your GitHub pages website.
-
-1. `CD` or open a terminal / command prompt window into the cloned folder.
-
-1. Start a simple python webserver. E.g., one of these commands:
-    * `python -m http.server 8000`
-    * `python3 -m http.server 8000`
-    * `py -m http.server 8000`
-    If you are using Python 2 you will need to use `python -m SimpleHTTPServer 8000` instead, but please switch to Python 3 as [Python 2 was sunset on 2020.01.01](https://www.python.org/doc/sunset-python-2/).
-
-1. Wait for the output: `Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/)`
-
-1. Now open your web browser (Firefox or Chrome) and navigate to the URL: http://localhost:8000
+Now open your web browser (Firefox or Chrome) and navigate to the URL: http://localhost:8000
 
 ## Root Files
 * `README.md` is this explanatory file for the repo.
 
-* `index.html` contains the main website content. It includes comments surrounded by `<!--` and `-->` to help guide you through making your edits.
+* `index.html` contains the main website content. This contains sections for:
+    * `Motivation`
+    * `Visualization` - both a description and the actual D3 implementation
+    * `Visualization Explaination` - a video walkthrough
+    * `Data Analysis`
+    * `Task Aanalysis`
+    * `Design Process` - including a description, prototypes, and initial sketches
+    * `Conclusion`
+    * `Acknowledgements`
 
 * `style.css` contains the CSS.
 
@@ -51,7 +41,7 @@ Note that you may have to clear your cache and reload (Ctrl+F5 on Chrome) a few 
 ## Folders
 Each folder has an explanatory `README.md` file
 
-* `data` is where you will put your data files.
+* `data` is where our data is in a json file. data/README.md contains the sources for this data. It was compiled using google sheets due to the small size of our dataset and small amount of overlapping data. 
 
 * `favicons` contains the favicons for the course projects. You shouldn't change anything here.
 
@@ -61,29 +51,17 @@ Each folder has an explanatory `README.md` file
 
 * `js` will contain all JavaScript files you write.
 
-  * `visualization.js` is the main code that builds all your visualizations. Each visualization should be built following the [Reusable Chart model](https://bost.ocks.org/mike/chart/)
+  * `visualization.js` is the main code that builds all of our visualization and facilitates brushing and linking.
+  * `scatterplot.js` contains the main scatterplot structure to compare infrastructure spending to rail usage. 
+  * `inlandRail.js` creates the popup bar when a point on the scatterplot is clicked, with percentages of inland transport spending that is dedicated to rail.
+  * `countryBar.js` creates another popup bar when a point on the scatterplot is clicked. It contains the percentage of rail investment goes to maintenence.
+  * `countryBarGraphs.js`is a template for the bar graphs next to the scatterplot. These show the rankings of each country for various measures.
+  * `imageCarousel.js` creates the image carousel in the prototypes section to show various sketches we made without taking up too much space. 
+  * `toggleGroups.js` an extra javascript file to be called when switching between groups of bar graphs depending on the type of data that you are trying to view. Essentially functionality for certain buttons.
+
   
 * `lib` will contain any JavaScript library you use. It currently includes D3.
 
-## Workflow
 
-As you work with your team, you may have issues merging your changes. We recommend you pick one member of the team to be the project manager and deal with merging any pull requests.
 
-Instead of all working directly out of the main `master` branch, you can try adopting a Git branching model for development. See, e.g., [this article by Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/) and the included image:
-
-![Image of Git branching model by Vincent Driessen](http://www.ccs.neu.edu/home/cody/courses/shared/git-model.png)
-
-## Grading
-
-Make sure to check these aspects of your work, which are important for every submission:
-
-* Coding was done properly:
-    * Your code was regularly committed and not edited via the GitHub user interface online.
-    * You have clear, commented, and validated code.
-    * Your web page loads properly and looks as expected in the latest Firefox and Chrome browsers.
-    * Any code from other sources (modified or copied straight) is acknowledged.
-
-* Your visualization works as required:
-    * Styles are consistent across views.
-    * None of the visualizations change size or move on the screen as you interact with them.
     
