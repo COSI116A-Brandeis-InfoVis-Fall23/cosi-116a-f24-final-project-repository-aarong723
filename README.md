@@ -1,7 +1,7 @@
 
 # Project Team 23: Public Transportation Systems Efficiency Analysis, COSI 116A F23
 
-***Aaron Gold, James Kong, Abbie Murphy, Emily Szabo***
+***Aaron Gold, Jimmy Kong, Abbie Murphy, Emily Szabo***
 
 An interactive data visualization using D3.v4 and javascript that explores various countries spending patterns on railway systems compared to the usage of those systems. This includes various quality measures and spending breakdowns as well. The final webpage additionaly contains a description, analysis, and walk through of the visualization and creation process. This visualization will run both on chrome and firefox. 
 
