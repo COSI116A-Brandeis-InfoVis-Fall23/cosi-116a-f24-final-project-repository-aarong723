@@ -109,7 +109,6 @@ function countryBarGraphs() {
         .attr("text-anchor", "middle")
         .style("fill", "white")
         .style("font-size", "12px")
-       
         .style("font-style", "italic")
         .text("i");
 
@@ -156,10 +155,6 @@ function countryBarGraphs() {
 
             }
             
-
-
-    
-    
             tooltip
               .style("opacity", 1)
               .style("visibility", "visible")
