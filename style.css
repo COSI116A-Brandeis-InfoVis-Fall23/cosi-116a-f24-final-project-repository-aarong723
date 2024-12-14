@@ -206,6 +206,12 @@ circle.selected {
 
 }
 
+#slides {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .fullscreen-btn {
     position: absolute;
     top: 5%;
@@ -289,7 +295,6 @@ circle.selected {
 .carousel-inner {
     display: flex;
     transition: transform 0.5s ease;
- 
 }
   
 .carousel-item {
@@ -384,10 +389,12 @@ circle.selected {
 	position:relative;
 	transition:0.5s;
 }
+
 #forkongithub a:hover{
 	background:#118;
 	color:#fff;
 }
+
 #forkongithub a::before,#forkongithub a::after{
 	content:"";
 	width:100%;
@@ -398,10 +405,12 @@ circle.selected {
 	height:1px;
 	background:#fff;
 }
+
 #forkongithub a::after{
 	bottom:1px;
 	top:auto;
 }
+
 @media screen and (min-width:1350px){
 	#forkongithub{
 		position:fixed;
@@ -474,4 +483,11 @@ circle.selected {
 		width: 100%;
 		height: 100%;
 	}
+
+	.carousel-control-prev,
+    .carousel-control-next {
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+    }
 }
