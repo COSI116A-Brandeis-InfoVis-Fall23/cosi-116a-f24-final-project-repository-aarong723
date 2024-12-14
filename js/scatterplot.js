@@ -179,12 +179,12 @@ function scatterplot() {
         let tooltipContent = "<strong>Country:</strong>" + " " + d.country + `<br><strong>Population: </strong> ${d3.format(",")(d.population)}`;
 
         if (d.infrastructureInvestment) {
-          tooltipContent += `<br><strong>Infrastructure Investment: </strong> $${d3.format(",.2f")(d.infrastructureInvestment)}`;
+          tooltipContent += `<br><strong>Infrastructure Investment: </strong> €${d3.format(",.2f")(d.infrastructureInvestment)}`;
    
           currentCount ++;
         }
         if (d.infrastructureMaintenance) {
-          tooltipContent += `<br><strong>Maintenance Investment: </strong> $${d3.format(",.2f")(d.infrastructureMaintenance)}`;
+          tooltipContent += `<br><strong>Maintenance Investment: </strong> €${d3.format(",.2f")(d.infrastructureMaintenance)}`;
           currentCount ++;
         }
         let currentHeight = 30 + (40 * currentCount); //Updates tooltip height
