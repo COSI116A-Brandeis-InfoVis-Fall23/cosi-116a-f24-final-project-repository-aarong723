@@ -9,7 +9,7 @@ function scatterplot() {
     yLabelOffsetPx = 0,
     xScale = d3.scaleLinear(),
     yScale = d3.scaleLinear(),
-    sizeScale = d3.scaleSqrt(), //!!scaleLinear
+    sizeScale = d3.scaleSqrt(), 
     selectableElements = d3.select(null),
     dispatcher = d3.dispatch("selectionUpdated", "countrySelected");
 
@@ -80,7 +80,7 @@ function scatterplot() {
         .attr("text-anchor", "middle")
         .style("fill", "white")
         .style("font-size", "12px")
-       
+         
         .style("font-style", "italic")
         .text("i");
       
