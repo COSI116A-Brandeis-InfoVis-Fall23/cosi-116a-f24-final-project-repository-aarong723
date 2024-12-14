@@ -69,7 +69,6 @@ function inlandRailBar() {
             .attr("text-anchor", "middle")
             .style("fill", "white")
             .style("font-size", "7px")
-           
             .style("font-style", "italic")
             .text("i");
     
@@ -80,8 +79,6 @@ function inlandRailBar() {
         infoGroup.on("mouseover", function (d) {
             d3.select(this).classed("mouseover", true);
             let tooltipContent = "Inland investment includes rail, road, waterway, and air infrastructure. Both rail and inland investment are from 2021.";
-
-    
     
             tooltip
               .style("opacity", 1)

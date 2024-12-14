@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Function to initialize the carousel
     function initializeCarousel(carouselId) {
         const carousel = document.querySelector(`#${carouselId} .carousel-inner`);
         const items = document.querySelectorAll(`#${carouselId} .carousel-item`);
@@ -7,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const dots = document.querySelectorAll(`#${carouselId} .dot`);
         let currentIndex = 0;
 
+        // Function to update the carousel display
         function updateCarousel() {
             const offset = -currentIndex * 100;
             carousel.style.transform = `translateX(${offset}%)`;
@@ -18,18 +20,21 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
+        // Event listener for the previous button
         prevButton.addEventListener('click', function(event) {
             event.preventDefault();
             currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
             updateCarousel();
         });
 
+        // Event listener for the next button
         nextButton.addEventListener('click', function(event) {
             event.preventDefault();
             currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
             updateCarousel();
         });
 
+        // Event listeners for the dots
         dots.forEach((dot, index) => {
             dot.addEventListener('click', function() {
                 currentIndex = index;
@@ -37,13 +42,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
+        // Initial update of the carousel
         updateCarousel(); 
     }
 
+    // Initialize carousels with specific IDs
     initializeCarousel('carouselFigma');
     initializeCarousel('carouselSketch');
 });
   
+// Function to open the carousel image in fullscreen
 function openFullscreen(carouselId) {
     const carousel = document.querySelector(`#${carouselId} .carousel-item.active img`);
     const fullscreenPanel = document.getElementById('fullscreenPanel');
@@ -62,6 +70,7 @@ function openFullscreen(carouselId) {
     } 
 }
 
+// Function to close the fullscreen image view
 function closeFullscreen() {
     const fullscreenPanel = document.getElementById('fullscreenPanel');
     fullscreenPanel.style.display = 'none';
