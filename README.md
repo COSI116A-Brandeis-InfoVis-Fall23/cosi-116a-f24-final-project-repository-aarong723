@@ -1,6 +1,8 @@
 
 # Project Team 23: Public Transportation Systems Efficiency Analysis, COSI 116A F23
 
+***Aaron Gold, James Kong, Abbie Murphy, Emily Szabo***
+
 An interactive data visualization using D3.v4 and javascript that explores various countries spending patterns on railway systems compared to the usage of those systems. This includes various quality measures and spending breakdowns as well. The final webpage additionaly contains a description, analysis, and walk through of the visualization and creation process. This visualization will run both on chrome and firefox. 
 
 ![screenshotOfVis](images/final_vis.png)
@@ -59,9 +61,5 @@ Each folder has an explanatory `README.md` file
   * `imageCarousel.js` creates the image carousel in the prototypes section to show various sketches we made without taking up too much space. 
   * `toggleGroups.js` an extra javascript file to be called when switching between groups of bar graphs depending on the type of data that you are trying to view. Essentially functionality for certain buttons.
 
-  
+
 * `lib` will contain any JavaScript library you use. It currently includes D3.
-
-
-
-    
