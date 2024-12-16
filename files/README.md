@@ -1,4 +1,3 @@
-# Put miscellaneous files in this folder
-In particular:
-* Your presentation slides as a PDF.
-* Your demo video as an MP4. It must be >= 1920x1080 --- 1080p encoded with the H.264/MPEG-4 AVC codec.
+# Miscellaneous files:
+* `finalPresentation.pdf` is the final presentation in pdf format of our final slides
+* `video.mp4` is a video presentation of these slides in addition to a demo of our visualization. 

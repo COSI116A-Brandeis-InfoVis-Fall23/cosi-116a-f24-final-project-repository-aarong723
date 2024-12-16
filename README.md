@@ -29,7 +29,7 @@ Now open your web browser (Firefox or Chrome) and navigate to the URL: http://lo
 * `index.html` contains the main website content. This contains sections for:
     * `Motivation`
     * `Visualization` - both a description and the actual D3 implementation
-    * `Visualization Explaination` - a video walkthrough
+    * `Visualization Explaination` - a video walkthrough and presentation.
     * `Data Analysis`
     * `Task Aanalysis`
     * `Design Process` - including a description, prototypes, and initial sketches
@@ -45,13 +45,13 @@ Each folder has an explanatory `README.md` file
 
 * `data` is where our data is in a json file. data/README.md contains the sources for this data. It was compiled using google sheets due to the small size of our dataset and small amount of overlapping data. 
 
-* `favicons` contains the favicons for the course projects. You shouldn't change anything here.
+* `favicons` contains the favicons for the course projects.
 
-* `files` will contain your slides (PDF) and video (MP4).
+* `files` contains our slides (PDF) and video (MP4).
 
-* `images` will contain your screenshots, diagrams, and photos.
+* `images` contains our screenshots, diagrams, and photos.
 
-* `js` will contain all JavaScript files you write.
+* `js` will contain all JavaScript files.
 
   * `visualization.js` is the main code that builds all of our visualization and facilitates brushing and linking.
   * `scatterplot.js` contains the main scatterplot structure to compare infrastructure spending to rail usage. 
@@ -62,4 +62,4 @@ Each folder has an explanatory `README.md` file
   * `toggleGroups.js` an extra javascript file to be called when switching between groups of bar graphs depending on the type of data that you are trying to view. Essentially functionality for certain buttons.
 
 
-* `lib` will contain any JavaScript library you use. It currently includes D3.
+* `lib` will contain all JavaScript libraries. It currently includes D3.
